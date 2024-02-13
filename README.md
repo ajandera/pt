@@ -1,0 +1,2 @@
+# pt
+Programovacie Techniky FBERG
