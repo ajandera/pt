@@ -28,7 +28,7 @@ int main() {
         fgets(input2, sizeof(input2), stdin);
 
         // Convert input to a number
-        if (sscanf(input2, "%d", &number2) == 1) {
+        if (sscanf(input2, "%d", &number2) == 1 && number2 >= 1) {
             validInput2 = 1; // Input is a valid number
         } else {
             printf("Invalid input. Please enter a valid number.\n");
