@@ -565,3 +565,14 @@ int main() {
 
 In this example, keywords like `int`, `float`, `char`, `return`, identifiers like `main`, `x`, `y`, `ch`, constants like `10`, `3.14`, `'A'`, operators like `=`, and punctuators like `;` are all lexical elements or tokens recognized by the C compiler during lexical analysis.
 
+### Operand priorities
+### Vyrazy
+
+## Riadiace struktury
+## Input and Output
+## Strings
+## Files
+## Pointers
+## Data structures
+## Sorting
+## Terminal functions
