@@ -568,11 +568,906 @@ In this example, keywords like `int`, `float`, `char`, `return`, identifiers lik
 ### Operand priorities
 ### Vyrazy
 
-## Riadiace struktury
+## Control Structures
+Control Structures are used to control the flow of execution in a program. They determine the order in which statements are executed based on conditions or loops.
+
+Here are the main types of control structures in C:
+
+1. **Selection Statements**:
+   - **if Statement**: Executes a block of code if a specified condition is true.
+   - **if-else Statement**: Executes one block of code if a condition is true and another block of code if the condition is false.
+   - **nested if Statement**: Using if statement inside another if statement.
+
+2. **Iteration Statements (Loops)**:
+   - **for Loop**: Executes a block of code repeatedly until a specified condition is false.
+   - **while Loop**: Executes a block of code repeatedly as long as a specified condition is true.
+   - **do-while Loop**: Executes a block of code repeatedly until a specified condition is false, with the condition checked after each iteration.
+
+3. **Jump Statements**:
+   - **break Statement**: Terminates the loop or switch statement and transfers control to the statement immediately following the loop or switch.
+   - **continue Statement**: Skips the current iteration of a loop and continues with the next iteration.
+   - **return Statement**: Terminates the execution of a function and returns a value to the caller.
+
+Control structures are essential for writing programs that can make decisions and perform repetitive tasks efficiently. They provide the means to create dynamic and flexible programs by controlling the flow of execution based on various conditions and criteria.
+
+1. **if Statement**:
+```c
+#include <stdio.h>
+
+int main() {
+    int num = 10;
+
+    if (num > 0) {
+        printf("The number is positive.\n");
+    }
+
+    return 0;
+}
+```
+
+2. **if-else Statement**:
+```c
+#include <stdio.h>
+
+int main() {
+    int num = -5;
+
+    if (num > 0) {
+        printf("The number is positive.\n");
+    } else {
+        printf("The number is non-positive.\n");
+    }
+
+    return 0;
+}
+```
+
+3. **nested if Statement**:
+```c
+#include <stdio.h>
+
+int main() {
+    int num = 0;
+
+    if (num > 0) {
+        printf("The number is positive.\n");
+    } else if (num < 0) {
+        printf("The number is negative.\n");
+    } else {
+        printf("The number is zero.\n");
+    }
+
+    return 0;
+}
+```
+
+4. **for Loop**:
+```c
+#include <stdio.h>
+
+int main() {
+    for (int i = 0; i < 5; i++) {
+        printf("Iteration %d\n", i);
+    }
+
+    return 0;
+}
+```
+
+5. **while Loop**:
+```c
+#include <stdio.h>
+
+int main() {
+    int i = 0;
+
+    while (i < 5) {
+        printf("Iteration %d\n", i);
+        i++;
+    }
+
+    return 0;
+}
+```
+
+6. **do-while Loop**:
+```c
+#include <stdio.h>
+
+int main() {
+    int i = 0;
+
+    do {
+        printf("Iteration %d\n", i);
+        i++;
+    } while (i < 5);
+
+    return 0;
+}
+```
+
+These examples demonstrate the basic usage of control structures in C for making decisions (if-else), repeating actions (loops), and controlling program flow based on conditions.
+
 ## Input and Output
+In C programming, input and output operations (often abbreviated as I/O) are essential for interacting with users, reading data from external sources, and displaying results. Input operations allow the program to receive data, while output operations enable the program to produce output.
+
+Here's a brief explanation of input and output operations in C:
+
+1. **Input Operations**:
+   - **scanf()**: The `scanf()` function is used to read input from the standard input stream (usually the keyboard) according to a specified format. It can read input of different data types (integers, floats, characters, etc.) and store them in variables.
+   - **gets()**: The `gets()` function reads a line of text from the standard input stream and stores it in a character array. However, it's not recommended due to potential buffer overflow issues. Consider using `fgets()` instead.
+   - **getchar()**: The `getchar()` function reads a single character from the standard input stream and returns it as an integer.
+   - **fgets()**: The `fgets()` function reads a line of text from the specified input stream (usually the standard input) and stores it in a character array.
+
+2. **Output Operations**:
+   - **printf()**: The `printf()` function is used to format and print output to the standard output stream (usually the console). It allows you to specify the format of the output using format specifiers and can print values of various data types.
+   - **puts()**: The `puts()` function is used to output a string to the standard output stream followed by a newline character. It automatically appends a newline character at the end of the string.
+   - **putchar()**: The `putchar()` function is used to output a single character to the standard output stream.
+
+In addition to standard input and output operations, C also supports file input/output operations, which allow reading from and writing to files on the disk. This is done using functions such as `fopen()`, `fclose()`, `fscanf()`, `fprintf()`, `fgets()`, `fputs()`, etc.
+
+Understanding input and output operations is crucial for building interactive and functional C programs, as they allow programs to communicate with users and external devices.
+
+1. **Output using printf()**:
+```c
+#include <stdio.h>
+
+int main() {
+    printf("Hello, world!\n");
+    return 0;
+}
+```
+
+2. **Input using scanf()**:
+```c
+#include <stdio.h>
+
+int main() {
+    int num;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+    printf("You entered: %d\n", num);
+    return 0;
+}
+```
+
+3. **Output using puts()**:
+```c
+#include <stdio.h>
+
+int main() {
+    puts("Hello, world!");
+    return 0;
+}
+```
+
+4. **Input using gets()** (Note: gets() is not recommended due to potential buffer overflow issues):
+```c
+#include <stdio.h>
+
+int main() {
+    char str[50];
+    printf("Enter a string: ");
+    gets(str);
+    printf("You entered: %s\n", str);
+    return 0;
+}
+```
+
+5. **Output using putchar()**:
+```c
+#include <stdio.h>
+
+int main() {
+    char ch = 'A';
+    putchar(ch);
+    putchar('\n');
+    return 0;
+}
+```
+
+6. **Input using getchar()**:
+```c
+#include <stdio.h>
+
+int main() {
+    char ch;
+    printf("Enter a character: ");
+    ch = getchar();
+    printf("You entered: %c\n", ch);
+    return 0;
+}
+```
+
+These examples demonstrate various ways of performing input and output operations in C, including using printf(), scanf(), puts(), gets(), putchar(), and getchar(). Depending on the specific requirements of your program, you can choose the appropriate function for inputting or outputting data.
+
 ## Strings
+In C programming, a string is a sequence of characters stored in an array and terminated by a null character (`'\0'`). Strings are used to represent text in C programs and are a fundamental part of many applications. Here are some key points about strings in C:
+
+1. **Character Array**: In C, strings are typically represented as arrays of characters, where each element of the array holds a single character of the string. The last character of the array is always a null character (`'\0'`), which marks the end of the string.
+
+2. **Null-Terminated**: Strings in C are null-terminated, meaning that the null character (`'\0'`) is used to indicate the end of the string. This allows C functions to determine the length of a string by searching for the null character.
+
+3. **String Literals**: String literals are sequences of characters enclosed in double quotation marks (`"`). They automatically include the null character at the end. For example, `"Hello"` is a string literal representing the string "Hello".
+
+4. **String Functions**: C provides several standard library functions for working with strings, such as `strlen()` (to get the length of a string), `strcpy()` (to copy one string to another), `strcat()` (to concatenate two strings), `strcmp()` (to compare two strings), etc.
+
+5. **Character Manipulation**: Strings in C can be manipulated character by character using array indexing and various string manipulation functions. Individual characters in a string can be accessed and modified using array notation.
+
+6. **Character Encoding**: In C, characters in strings are typically encoded using ASCII (American Standard Code for Information Interchange) or a compatible encoding. Each character is represented by a unique numerical value.
+
+Here's an example demonstrating the declaration, initialization, and manipulation of strings in C:
+
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char greeting[] = "Hello, world!"; // Declaration and initialization of a string
+    printf("Original greeting: %s\n", greeting);
+
+    // Manipulating the string
+    greeting[7] = 'W'; // Changing 'w' to 'W'
+    printf("Modified greeting: %s\n", greeting);
+
+    // Using string manipulation functions
+    char name[20];
+    strcpy(name, "John"); // Copying a string
+    strcat(name, " Smith"); // Concatenating two strings
+    printf("Full name: %s\n", name);
+
+    // Getting the length of a string
+    printf("Length of greeting: %zu\n", strlen(greeting));
+
+    return 0;
+}
+```
+
+Output:
+```
+Original greeting: Hello, world!
+Modified greeting: Hello, World!
+Full name: John Smith
+Length of greeting: 13
+```
+
+Understanding strings in C is essential for working with text-based data and building applications that involve processing and manipulating strings.
+
+Here are some more examples demonstrating different aspects of working with strings in C:
+
+1. **Reading and Printing Strings**:
+```c
+#include <stdio.h>
+
+int main() {
+    char name[20];
+    
+    // Reading a string
+    printf("Enter your name: ");
+    scanf("%19s", name); // Read up to 19 characters to leave space for the null terminator
+    
+    // Printing a string
+    printf("Hello, %s!\n", name);
+    
+    return 0;
+}
+```
+
+2. **Comparing Strings**:
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[] = "hello";
+    char str2[] = "world";
+
+    // Comparing strings
+    if (strcmp(str1, str2) == 0) {
+        printf("The strings are equal.\n");
+    } else {
+        printf("The strings are not equal.\n");
+    }
+
+    return 0;
+}
+```
+
+3. **Copying Strings**:
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char source[] = "Hello, world!";
+    char destination[20];
+
+    // Copying a string
+    strcpy(destination, source);
+    printf("Copied string: %s\n", destination);
+
+    return 0;
+}
+```
+
+4. **Concatenating Strings**:
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str1[20] = "Hello";
+    char str2[] = ", world!";
+
+    // Concatenating strings
+    strcat(str1, str2);
+    printf("Concatenated string: %s\n", str1);
+
+    return 0;
+}
+```
+
+5. **Finding Substrings**:
+```c
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    char str[] = "This is a test string";
+    char *ptr;
+
+    // Finding a substring
+    ptr = strstr(str, "test");
+    if (ptr != NULL) {
+        printf("Substring found at index %ld\n", ptr - str);
+    } else {
+        printf("Substring not found.\n");
+    }
+
+    return 0;
+}
+```
+
+These examples illustrate various operations you can perform with strings in C, including reading and printing strings, comparing strings, copying strings, concatenating strings, and finding substrings. Understanding these operations will help you work effectively with text data in your C programs.
+
 ## Files
+Working with files in C involves performing operations such as opening, reading from, writing to, and closing files. C provides standard library functions and data types for file handling, allowing you to manipulate files stored on the disk. Here's an overview of how to work with files in C:
+
+1. **Include Header File**: Include the `<stdio.h>` header file, which provides functions for file handling.
+
+   ```c
+   #include <stdio.h>
+   ```
+
+2. **File Pointer**: Declare a file pointer variable to hold a reference to the file being manipulated. You'll use this pointer to perform file operations.
+
+   ```c
+   FILE *file_ptr;
+   ```
+
+3. **Opening Files**: Use the `fopen()` function to open a file. This function takes two arguments: the filename (or path) of the file to open and the mode indicating the type of access (read, write, append, etc.).
+
+   ```c
+   file_ptr = fopen("example.txt", "r"); // Opens the file "example.txt" for reading
+   ```
+
+4. **Checking for Errors**: Always check if the file was opened successfully before performing any operations on it.
+
+   ```c
+   if (file_ptr == NULL) {
+       printf("Error opening file.\n");
+       return 1; // or handle the error appropriately
+   }
+   ```
+
+5. **Reading from Files**: Use functions like `fscanf()` or `fgets()` to read data from the file.
+
+   ```c
+   char buffer[100];
+   fscanf(file_ptr, "%s", buffer); // Reads a string from the file
+   ```
+
+6. **Writing to Files**: Use functions like `fprintf()` or `fputs()` to write data to the file.
+
+   ```c
+   fprintf(file_ptr, "This is a line of text.\n"); // Writes a string to the file
+   ```
+
+7. **Closing Files**: Always close the file when you're done with it using the `fclose()` function.
+
+   ```c
+   fclose(file_ptr);
+   ```
+
+8. **Error Handling**: Handle errors appropriately when performing file operations. For example, check the return values of functions for errors and handle them accordingly.
+
+   ```c
+   if (fscanf(file_ptr, "%s", buffer) != 1) {
+       printf("Error reading from file.\n");
+       return 1; // or handle the error appropriately
+   }
+   ```
+
+9. **Working with Binary Files**: For binary files, use functions like `fread()` and `fwrite()` to read and write binary data.
+
+   ```c
+   // Reading binary data
+   fread(buffer, sizeof(char), 100, file_ptr);
+   
+   // Writing binary data
+   fwrite(buffer, sizeof(char), 100, file_ptr);
+   ```
+
+10. **Working with Text Files**: For text files, use functions like `fgets()` and `fputs()` to read and write text data.
+
+   ```c
+   // Reading text data
+   fgets(buffer, 100, file_ptr);
+   
+   // Writing text data
+   fputs("This is a line of text.", file_ptr);
+   ```
+
+These are the basic steps involved in working with files in C. By using these functions and following these steps, you can perform a wide range of file operations in your C programs.
+
+Certainly! Here are more examples demonstrating various file operations in C:
+
+1. **Reading from a Text File**:
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *file_ptr;
+    char buffer[100];
+
+    file_ptr = fopen("example.txt", "r");
+    if (file_ptr == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+
+    while (fgets(buffer, sizeof(buffer), file_ptr) != NULL) {
+        printf("%s", buffer);
+    }
+
+    fclose(file_ptr);
+    return 0;
+}
+```
+
+2. **Writing to a Text File**:
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *file_ptr;
+
+    file_ptr = fopen("output.txt", "w");
+    if (file_ptr == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+
+    fprintf(file_ptr, "This is line 1.\n");
+    fprintf(file_ptr, "This is line 2.\n");
+
+    fclose(file_ptr);
+    return 0;
+}
+```
+
+3. **Appending to a Text File**:
+```c
+#include <stdio.h>
+
+int main() {
+    FILE *file_ptr;
+
+    file_ptr = fopen("output.txt", "a");
+    if (file_ptr == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+
+    fprintf(file_ptr, "This is line 3.\n");
+
+    fclose(file_ptr);
+    return 0;
+}
+```
+
+4. **Reading and Writing Binary Data**:
+```c
+#include <stdio.h>
+
+struct Employee {
+    char name[50];
+    int age;
+    float salary;
+};
+
+int main() {
+    FILE *file_ptr;
+    struct Employee emp;
+
+    // Writing binary data
+    file_ptr = fopen("employees.bin", "wb");
+    if (file_ptr == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+
+    strcpy(emp.name, "John");
+    emp.age = 30;
+    emp.salary = 50000.0;
+
+    fwrite(&emp, sizeof(emp), 1, file_ptr);
+
+    fclose(file_ptr);
+
+    // Reading binary data
+    file_ptr = fopen("employees.bin", "rb");
+    if (file_ptr == NULL) {
+        printf("Error opening file.\n");
+        return 1;
+    }
+
+    fread(&emp, sizeof(emp), 1, file_ptr);
+    printf("Name: %s, Age: %d, Salary: %.2f\n", emp.name, emp.age, emp.salary);
+
+    fclose(file_ptr);
+    return 0;
+}
+```
+
+These examples demonstrate reading from and writing to text files, appending to text files, and reading and writing binary data to binary files. Working with files in C allows you to manipulate data stored on the disk, making it a powerful tool for file input/output operations in your programs.
+
 ## Pointers
+Pointers are one of the most powerful and fundamental concepts in the C programming language. They provide a way to directly manipulate memory addresses, enabling efficient memory management and allowing for more flexible and efficient programming techniques. Here's an explanation of pointers in C:
+
+1. **Definition**: A pointer is a variable that stores the memory address of another variable. In other words, it "points to" the location in memory where data is stored.
+
+2. **Declaration**: To declare a pointer variable, you use the `*` (asterisk) symbol before the variable name. For example:
+   ```c
+   int *ptr;
+   ```
+   This declares a pointer variable named `ptr` that can point to an integer value.
+
+3. **Initialization**: Pointers can be initialized with the address of another variable using the address-of operator `&`. For example:
+   ```c
+   int num = 10;
+   int *ptr = &num;
+   ```
+   This initializes the pointer `ptr` with the address of the variable `num`.
+
+4. **Dereferencing**: Dereferencing a pointer means accessing the value stored at the memory address it points to. You use the `*` operator to dereference a pointer. For example:
+   ```c
+   int num = 10;
+   int *ptr = &num;
+   printf("Value of num: %d\n", *ptr); // Output: Value of num: 10
+   ```
+   Here, `*ptr` accesses the value stored at the memory address pointed to by `ptr`.
+
+5. **Pointer Arithmetic**: Pointers support arithmetic operations such as addition and subtraction. When you perform arithmetic operations on pointers, the result is adjusted based on the size of the data type being pointed to. For example:
+   ```c
+   int arr[5] = {10, 20, 30, 40, 50};
+   int *ptr = arr;
+   printf("Third element of the array: %d\n", *(ptr + 2)); // Output: Third element of the array: 30
+   ```
+   Here, `ptr + 2` points to the third element of the array `arr`, and `*(ptr + 2)` dereferences the pointer to access the value.
+
+6. **Null Pointers**: A null pointer is a special value indicating that the pointer does not point to any valid memory address. You can assign `NULL` (or `0`) to a pointer variable to make it a null pointer.
+
+7. **Pointer and Arrays**: Pointers and arrays are closely related in C. In fact, arrays are accessed using pointers. An array name is a constant pointer to the first element of the array.
+
+8. **Dynamic Memory Allocation**: Pointers are commonly used for dynamic memory allocation using functions like `malloc()`, `calloc()`, and `realloc()` to allocate memory at runtime.
+
+Understanding pointers is essential for mastering C programming, as they enable you to work directly with memory and create more efficient and flexible code. However, they also introduce complexities and potential pitfalls, such as segmentation faults and memory leaks, so it's important to use them carefully and understand their behavior thoroughly.
+
+Complex example demonstrating various pointer concepts in C:
+
+```c
+#include <stdio.h>
+
+int main() {
+    // Declare and initialize variables
+    int num = 10;
+    int *ptr = &num;
+    int arr[5] = {1, 2, 3, 4, 5};
+    int *arr_ptr = arr;
+
+    // Dereferencing pointers
+    printf("Value of num: %d\n", *ptr); // Output: Value of num: 10
+
+    // Pointer arithmetic
+    printf("Third element of the array: %d\n", *(arr_ptr + 2)); // Output: Third element of the array: 3
+
+    // Incrementing pointers
+    printf("First element of the array: %d\n", *arr_ptr); // Output: First element of the array: 1
+    arr_ptr++; // Increment pointer
+    printf("Second element of the array: %d\n", *arr_ptr); // Output: Second element of the array: 2
+
+    // Array name as a pointer
+    printf("First element of the array using array name: %d\n", *arr); // Output: First element of the array using array name: 1
+
+    // Null pointer
+    int *null_ptr = NULL;
+    if (null_ptr == NULL) {
+        printf("Null pointer\n");
+    }
+
+    // Dynamic memory allocation
+    int *dyn_arr = (int *)malloc(5 * sizeof(int));
+    if (dyn_arr != NULL) {
+        for (int i = 0; i < 5; i++) {
+            dyn_arr[i] = i + 1;
+        }
+        printf("Dynamic array: ");
+        for (int i = 0; i < 5; i++) {
+            printf("%d ", dyn_arr[i]);
+        }
+        printf("\n");
+        free(dyn_arr); // Free dynamically allocated memory
+    } else {
+        printf("Memory allocation failed.\n");
+    }
+
+    return 0;
+}
+```
+
+This example covers various aspects of pointers in C, including:
+
+- Initializing and dereferencing pointers.
+- Performing pointer arithmetic to access elements of an array.
+- Incrementing pointers to navigate through an array.
+- Using the array name as a pointer.
+- Using a null pointer.
+- Dynamic memory allocation using `malloc()` and `free()` functions.
+
+Understanding and mastering these concepts will greatly enhance your ability to work with pointers in C programming.
+
 ## Data structures
+In C programming, data structures are used to organize and store data efficiently in memory. Data structures provide a way to represent complex data in a more organized and manageable manner. They enable efficient manipulation and retrieval of data, making them essential for building scalable and efficient software systems. Here's an explanation of data structures in C:
+
+1. **Definition**: A data structure is a collection of data elements organized in a specific way to perform operations on the data efficiently. Each data structure has its own set of operations and rules for accessing and modifying the data.
+
+2. **Types of Data Structures**: There are many types of data structures in C, each designed for specific purposes. Some common data structures include:
+   - **Arrays**: A collection of elements of the same data type stored in contiguous memory locations.
+   - **Linked Lists**: A collection of nodes where each node contains a data element and a reference (pointer) to the next node in the sequence.
+   - **Stacks**: A Last-In-First-Out (LIFO) data structure that supports two main operations: push (to add an element) and pop (to remove an element).
+   - **Queues**: A First-In-First-Out (FIFO) data structure that supports two main operations: enqueue (to add an element) and dequeue (to remove an element).
+   - **Trees**: A hierarchical data structure consisting of nodes where each node has a value and a reference (pointer) to its child nodes.
+   - **Graphs**: A collection of nodes (vertices) connected by edges, where each edge may have a weight or other properties.
+   - **Hash Tables**: A data structure that stores key-value pairs and supports fast retrieval of values based on their keys.
+
+3. **Implementation**: Data structures can be implemented using C language constructs such as arrays, pointers, structures, and dynamic memory allocation. For example, linked lists can be implemented using pointers to connect nodes, while trees can be implemented using structures to represent nodes and pointers to connect them.
+
+4. **Operations**: Each data structure supports various operations for manipulating the data it holds. These operations may include insertion, deletion, searching, traversal, sorting, and more. The efficiency of these operations depends on the specific data structure used and the algorithms employed.
+
+5. **Applications**: Data structures are used in various applications and domains, including algorithms, databases, operating systems, compilers, networking, artificial intelligence, and more. They provide a foundation for solving complex problems efficiently and are essential for building robust and scalable software systems.
+
+Understanding data structures and their properties is crucial for writing efficient and scalable C programs. By choosing the appropriate data structure for a given problem and implementing it effectively, you can optimize the performance and maintainability of your code.
+
+Here's an example of implementing a simple linked list data structure in C:
+
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+// Define a structure for a node in the linked list
+struct Node {
+    int data;
+    struct Node *next;
+};
+
+// Function to create a new node
+struct Node *createNode(int data) {
+    struct Node *newNode = (struct Node *)malloc(sizeof(struct Node));
+    if (newNode == NULL) {
+        printf("Memory allocation failed.\n");
+        exit(1);
+    }
+    newNode->data = data;
+    newNode->next = NULL;
+    return newNode;
+}
+
+// Function to insert a node at the beginning of the linked list
+struct Node *insertAtBeginning(struct Node *head, int data) {
+    struct Node *newNode = createNode(data);
+    newNode->next = head;
+    return newNode;
+}
+
+// Function to print the linked list
+void printLinkedList(struct Node *head) {
+    struct Node *current = head;
+    while (current != NULL) {
+        printf("%d -> ", current->data);
+        current = current->next;
+    }
+    printf("NULL\n");
+}
+
+int main() {
+    // Initialize an empty linked list
+    struct Node *head = NULL;
+
+    // Insert elements into the linked list
+    head = insertAtBeginning(head, 3);
+    head = insertAtBeginning(head, 2);
+    head = insertAtBeginning(head, 1);
+
+    // Print the linked list
+    printf("Linked List: ");
+    printLinkedList(head);
+
+    return 0;
+}
+```
+
+In this example, we define a `struct Node` to represent a node in the linked list. Each node contains an integer `data` field and a pointer `next` field pointing to the next node in the list. We implement functions to create a new node (`createNode()`), insert a node at the beginning of the list (`insertAtBeginning()`), and print the linked list (`printLinkedList()`). Finally, we demonstrate the usage of these functions in the `main()` function by creating a linked list and printing its elements.
+
 ## Sorting
+Sorting is the process of arranging elements in a specific order, such as ascending or descending, based on some criteria. In C language, sorting is a common operation performed on arrays or other data structures to organize the data in a more structured manner. Here's an explanation of sorting in C:
+
+1. **Types of Sorting Algorithms**: There are many sorting algorithms, each with its own advantages and disadvantages in terms of time complexity, space complexity, stability, and adaptability to different types of data. Some common sorting algorithms include:
+   - **Bubble Sort**: Compares adjacent elements and swaps them if they are in the wrong order.
+   - **Selection Sort**: Finds the minimum element in the unsorted portion and swaps it with the first unsorted element.
+   - **Insertion Sort**: Builds the sorted array one element at a time by inserting each element into its correct position.
+   - **Merge Sort**: Divides the array into two halves, recursively sorts each half, and then merges the sorted halves.
+   - **Quick Sort**: Picks a pivot element and partitions the array into two subarrays such that elements less than the pivot are on the left and elements greater than the pivot are on the right.
+   - **Heap Sort**: Builds a binary heap from the array and repeatedly extracts the maximum element from the heap.
+
+2. **Implementation**: Sorting algorithms can be implemented in C using loops, conditional statements, and array manipulation techniques. The choice of algorithm depends on factors such as the size of the data, the distribution of the data, and the desired stability or adaptability of the sorting process.
+
+3. **Time Complexity**: The time complexity of a sorting algorithm indicates how its performance scales with the size of the input data. Sorting algorithms can have different time complexities, ranging from O(n^2) for inefficient algorithms like Bubble Sort and Selection Sort, to O(n log n) for more efficient algorithms like Merge Sort and Quick Sort.
+
+4. **Space Complexity**: The space complexity of a sorting algorithm refers to the amount of additional memory it requires to perform the sorting operation. In-place sorting algorithms modify the input array itself without requiring additional memory, while others may require additional memory for temporary storage.
+
+5. **Stability**: Stability refers to whether the sorting algorithm preserves the relative order of equal elements in the sorted output. A stable sorting algorithm maintains the order of equal elements as they appear in the original input array.
+
+6. **Adaptability**: Some sorting algorithms are adaptive, meaning they perform better when the input data is partially sorted or nearly sorted. Adaptive sorting algorithms can take advantage of existing order in the data to improve performance.
+
+7. **Library Functions**: In addition to implementing sorting algorithms from scratch, C also provides standard library functions like `qsort()` for quicksort and `bsearch()` for binary search, which can be used to sort arrays and search for elements in sorted arrays.
+
+Understanding sorting algorithms and their properties is essential for writing efficient and scalable C programs that manipulate large datasets. By choosing the appropriate sorting algorithm for a given problem and implementing it effectively, you can optimize the performance and efficiency of your code.
+
+Sure! Here are examples of various sorting algorithms implemented in C:
+
+1. **Bubble Sort**:
+```c
+#include <stdio.h>
+
+void bubbleSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        for (int j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                // Swap arr[j] and arr[j + 1]
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    int arr[] = {64, 34, 25, 12, 22, 11, 90};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    bubbleSort(arr, n);
+    printf("Sorted array: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+```
+
+2. **Selection Sort**:
+```c
+#include <stdio.h>
+
+void selectionSort(int arr[], int n) {
+    for (int i = 0; i < n - 1; i++) {
+        int minIndex = i;
+        for (int j = i + 1; j < n; j++) {
+            if (arr[j] < arr[minIndex]) {
+                minIndex = j;
+            }
+        }
+        // Swap arr[i] and arr[minIndex]
+        int temp = arr[i];
+        arr[i] = arr[minIndex];
+        arr[minIndex] = temp;
+    }
+}
+
+int main() {
+    int arr[] = {64, 25, 12, 22, 11};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    selectionSort(arr, n);
+    printf("Sorted array: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+```
+
+3. **Insertion Sort**:
+```c
+#include <stdio.h>
+
+void insertionSort(int arr[], int n) {
+    for (int i = 1; i < n; i++) {
+        int key = arr[i];
+        int j = i - 1;
+        while (j >= 0 && arr[j] > key) {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
+}
+
+int main() {
+    int arr[] = {12, 11, 13, 5, 6};
+    int n = sizeof(arr) / sizeof(arr[0]);
+    insertionSort(arr, n);
+    printf("Sorted array: ");
+    for (int i = 0; i < n; i++) {
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+```
+
+These examples demonstrate the implementation of Bubble Sort, Selection Sort, and Insertion Sort in C. Each sorting algorithm sorts the given array in ascending order. You can modify the input array to test these algorithms with different datasets.
+
 ## Terminal functions
+In C programming, you can interact with the terminal (command line interface) using various standard library functions provided by `<stdio.h>`. These functions allow you to read input from the terminal, display output to the terminal, and perform other operations such as clearing the screen or getting the current time. Here are some commonly used terminal functions in C:
+
+1. **Input Functions**:
+   - **scanf()**: Reads formatted input from the standard input (keyboard). It's commonly used to read user input from the terminal.
+   - **fgets()**: Reads a line of text from the standard input (keyboard) and stores it in a string.
+   - **getchar()**: Reads a single character from the standard input (keyboard).
+
+2. **Output Functions**:
+   - **printf()**: Prints formatted output to the standard output (terminal). It's commonly used to display messages, variables, and other data.
+   - **puts()**: Prints a string followed by a newline character to the standard output (terminal).
+   - **putchar()**: Prints a single character to the standard output (terminal).
+
+3. **Terminal Control Functions**:
+   - **system()**: Executes a command specified by a string in the terminal. It's commonly used to run external programs or system commands.
+   - **getch()**: Reads a single character from the standard input (keyboard) without waiting for the Enter key to be pressed. This function is often used for interactive console-based applications.
+   - **clrscr()**: Clears the screen of the terminal. This function is commonly used to provide a clean interface for displaying output.
+
+Here's an example demonstrating the use of some of these terminal functions in C:
+
+```c
+#include <stdio.h>
+#include <stdlib.h> // for system() function
+
+int main() {
+    char name[50];
+    int age;
+
+    // Reading input from the terminal
+    printf("Enter your name: ");
+    scanf("%s", name);
+    printf("Enter your age: ");
+    scanf("%d", &age);
+
+    // Displaying output to the terminal
+    printf("Hello, %s! You are %d years old.\n", name, age);
+
+    // Using system() function to execute a command in the terminal
+    system("ls -l");
+
+    return 0;
+}
+```
+
+This example prompts the user to enter their name and age, reads the input from the terminal using `scanf()`, and then displays a greeting message along with the entered name and age using `printf()`. Finally, it uses the `system()` function to execute the `ls -l` command in the terminal, which lists the contents of the current directory.
