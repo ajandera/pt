@@ -528,7 +528,7 @@ In C, variable declaration involves specifying the data type and name of the var
 
 These examples demonstrate the basic syntax for declaring variables in C. In each case, the data type (e.g., `int`, `float`, `char`, `struct`) is followed by the variable name. Optionally, you can provide an initial value for the variable at the time of declaration.
 
-##  Lexical elements or tokens
+## Lexical elements or tokens
 
 These are the smallest units of meaning in the language, identified by the lexical analyzer (also known as the lexer or scanner) during the process of lexical analysis.
 
@@ -1427,6 +1427,7 @@ int main() {
 These examples demonstrate the implementation of Bubble Sort, Selection Sort, and Insertion Sort in C. Each sorting algorithm sorts the given array in ascending order. You can modify the input array to test these algorithms with different datasets.
 
 ## Terminal functions
+
 In C programming, you can interact with the terminal (command line interface) using various standard library functions provided by `<stdio.h>`. These functions allow you to read input from the terminal, display output to the terminal, and perform other operations such as clearing the screen or getting the current time. Here are some commonly used terminal functions in C:
 
 1. **Input Functions**:
@@ -1471,3 +1472,5 @@ int main() {
 ```
 
 This example prompts the user to enter their name and age, reads the input from the terminal using `scanf()`, and then displays a greeting message along with the entered name and age using `printf()`. Finally, it uses the `system()` function to execute the `ls -l` command in the terminal, which lists the contents of the current directory.
+
+## References
