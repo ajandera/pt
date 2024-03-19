@@ -26,9 +26,7 @@ Here's a basic timeline of key events in the history of C:
 Throughout its history, C has remained a popular and influential programming language due to its simplicity, efficiency, and flexibility. It has been used to develop countless software applications, operating systems, libraries, and more. Additionally, many modern programming languages, such as C++, Java, and Python, have been influenced by C's syntax and design principles.
 
 
-## Structures
-
-Sure! Here's a simple example of a basic `main` function in C:
+## Hello, world
 
 ```c
 #include <stdio.h>
@@ -45,6 +43,8 @@ In this example:
 - The `int main()` function is the entry point of the C program. It's where the execution of the program begins. It returns an integer value to the operating system indicating the success or failure of the program. By convention, returning `0` indicates successful execution, while a non-zero value indicates an error.
 - Inside the `main` function, we use the `printf` function to print the string `"Hello, world!\n"` to the console. The `\n` is the newline character, which moves the cursor to the next line after printing "Hello, world!".
 - Finally, the `return 0;` statement indicates that the program has executed successfully and returns `0` to the operating system.
+
+## Structures
 
 In C programming language, a structure is a user-defined data type that allows you to group together different types of variables under a single name. It's useful for organizing related data into a meaningful unit. Here's an example of how you can define and use structures in C:
 
