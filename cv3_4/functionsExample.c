@@ -3,7 +3,7 @@
 
 #define  MAXLINE  100 /* max. dlzka vstupn. riadku */
 
-int getline(char s[],int lim);
+int getlinee(char s[],int lim);
 void copy(char s1[], char s2[]);
 
 void main(void)
@@ -12,7 +12,7 @@ void main(void)
   char line[MAXLINE], save[MAXLINE];
 
   max=0;
-  while((len=getline(line,MAXLINE))>=0)
+  while((len=getlinee(line,MAXLINE))>=0)
   {
     if (len > max)
     {
@@ -26,7 +26,7 @@ void main(void)
   printf("Jeho dlzka   : %d\n",max);
 }
 
-int getline(char s[],int lim)
+int getlinee(char s[],int lim)
 {
   int c,i;
 

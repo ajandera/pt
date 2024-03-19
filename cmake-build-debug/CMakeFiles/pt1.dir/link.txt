@@ -1,0 +1,1 @@
+/usr/bin/cc -g  -rdynamic CMakeFiles/pt1.dir/cv3_4/maxis.c.o  -o pt1 
