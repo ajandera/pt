@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/mnt/e/Martin/git/pt1/cv3_4/maxis.c">
+		<Unit filename="/mnt/e/Martin/git/pt1/CV4_Structures/structures.c">
 			<Option target="pt1"/>
 		</Unit>
 		<Unit filename="/mnt/e/Martin/git/pt1/CMakeLists.txt">

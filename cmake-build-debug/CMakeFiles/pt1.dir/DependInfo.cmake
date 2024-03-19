@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/mnt/e/Martin/git/pt1/cv3_4/maxis.c" "/mnt/e/Martin/git/pt1/cmake-build-debug/CMakeFiles/pt1.dir/cv3_4/maxis.c.o"
+  "/mnt/e/Martin/git/pt1/CV4_Structures/structures.c" "/mnt/e/Martin/git/pt1/cmake-build-debug/CMakeFiles/pt1.dir/CV4_Structures/structures.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

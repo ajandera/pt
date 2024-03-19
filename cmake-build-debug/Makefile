@@ -123,32 +123,32 @@ pt1/fast:
 	$(MAKE) -f CMakeFiles/pt1.dir/build.make CMakeFiles/pt1.dir/build
 .PHONY : pt1/fast
 
-cv3_4/maxis.o: cv3_4/maxis.c.o
+CV4_Structures/structures.o: CV4_Structures/structures.c.o
 
-.PHONY : cv3_4/maxis.o
+.PHONY : CV4_Structures/structures.o
 
 # target to build an object file
-cv3_4/maxis.c.o:
-	$(MAKE) -f CMakeFiles/pt1.dir/build.make CMakeFiles/pt1.dir/cv3_4/maxis.c.o
-.PHONY : cv3_4/maxis.c.o
+CV4_Structures/structures.c.o:
+	$(MAKE) -f CMakeFiles/pt1.dir/build.make CMakeFiles/pt1.dir/CV4_Structures/structures.c.o
+.PHONY : CV4_Structures/structures.c.o
 
-cv3_4/maxis.i: cv3_4/maxis.c.i
+CV4_Structures/structures.i: CV4_Structures/structures.c.i
 
-.PHONY : cv3_4/maxis.i
+.PHONY : CV4_Structures/structures.i
 
 # target to preprocess a source file
-cv3_4/maxis.c.i:
-	$(MAKE) -f CMakeFiles/pt1.dir/build.make CMakeFiles/pt1.dir/cv3_4/maxis.c.i
-.PHONY : cv3_4/maxis.c.i
+CV4_Structures/structures.c.i:
+	$(MAKE) -f CMakeFiles/pt1.dir/build.make CMakeFiles/pt1.dir/CV4_Structures/structures.c.i
+.PHONY : CV4_Structures/structures.c.i
 
-cv3_4/maxis.s: cv3_4/maxis.c.s
+CV4_Structures/structures.s: CV4_Structures/structures.c.s
 
-.PHONY : cv3_4/maxis.s
+.PHONY : CV4_Structures/structures.s
 
 # target to generate assembly for a file
-cv3_4/maxis.c.s:
-	$(MAKE) -f CMakeFiles/pt1.dir/build.make CMakeFiles/pt1.dir/cv3_4/maxis.c.s
-.PHONY : cv3_4/maxis.c.s
+CV4_Structures/structures.c.s:
+	$(MAKE) -f CMakeFiles/pt1.dir/build.make CMakeFiles/pt1.dir/CV4_Structures/structures.c.s
+.PHONY : CV4_Structures/structures.c.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... pt1"
-	@echo "... cv3_4/maxis.o"
-	@echo "... cv3_4/maxis.i"
-	@echo "... cv3_4/maxis.s"
+	@echo "... CV4_Structures/structures.o"
+	@echo "... CV4_Structures/structures.i"
+	@echo "... CV4_Structures/structures.s"
 .PHONY : help
 
 

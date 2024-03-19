@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int validation(char input[50]);
+
 int main() {
     int number;
     int number2;
@@ -13,11 +15,12 @@ int main() {
         printf("Please enter a number: ");
         fgets(input, sizeof(input), stdin);
 
-        // Convert input to a number
-        if (sscanf(input, "%d", &number) == 1) {
-            validInput = 1; // Input is a valid number
-        } else {
+        number = validation(input);
+
+        if (number == 0) {
             printf("Invalid input. Please enter a valid number.\n");
+        } else {
+            validInput = 1; 
         }
     }
 
@@ -38,4 +41,13 @@ int main() {
 
     printf("The decision of the numbers is %d.\n", number/number2);
     return 0;
+}
+
+int validation(char input[50]) {
+    int number;
+    if (sscanf(input, "%d", &number) == 1) {
+        return number;
+    } else {
+        return 0;
+    }
 }

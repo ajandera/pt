@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/pt1.dir/cv3_4/maxis.c.o"
+  "CMakeFiles/pt1.dir/CV4_Structures/structures.c.o"
   "pt1"
   "pt1.pdb"
 )
