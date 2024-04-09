@@ -57,27 +57,27 @@ include CMakeFiles/pt1.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/pt1.dir/flags.make
 
-CMakeFiles/pt1.dir/CV4_Structures/structures.c.o: CMakeFiles/pt1.dir/flags.make
-CMakeFiles/pt1.dir/CV4_Structures/structures.c.o: ../CV4_Structures/structures.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/Martin/git/pt1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/pt1.dir/CV4_Structures/structures.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pt1.dir/CV4_Structures/structures.c.o   -c /mnt/e/Martin/git/pt1/CV4_Structures/structures.c
+CMakeFiles/pt1.dir/CV5/poiters.c.o: CMakeFiles/pt1.dir/flags.make
+CMakeFiles/pt1.dir/CV5/poiters.c.o: ../CV5/poiters.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/e/Martin/git/pt1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/pt1.dir/CV5/poiters.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/pt1.dir/CV5/poiters.c.o   -c /mnt/e/Martin/git/pt1/CV5/poiters.c
 
-CMakeFiles/pt1.dir/CV4_Structures/structures.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pt1.dir/CV4_Structures/structures.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/e/Martin/git/pt1/CV4_Structures/structures.c > CMakeFiles/pt1.dir/CV4_Structures/structures.c.i
+CMakeFiles/pt1.dir/CV5/poiters.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/pt1.dir/CV5/poiters.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /mnt/e/Martin/git/pt1/CV5/poiters.c > CMakeFiles/pt1.dir/CV5/poiters.c.i
 
-CMakeFiles/pt1.dir/CV4_Structures/structures.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pt1.dir/CV4_Structures/structures.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/e/Martin/git/pt1/CV4_Structures/structures.c -o CMakeFiles/pt1.dir/CV4_Structures/structures.c.s
+CMakeFiles/pt1.dir/CV5/poiters.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/pt1.dir/CV5/poiters.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /mnt/e/Martin/git/pt1/CV5/poiters.c -o CMakeFiles/pt1.dir/CV5/poiters.c.s
 
 # Object files for target pt1
 pt1_OBJECTS = \
-"CMakeFiles/pt1.dir/CV4_Structures/structures.c.o"
+"CMakeFiles/pt1.dir/CV5/poiters.c.o"
 
 # External object files for target pt1
 pt1_EXTERNAL_OBJECTS =
 
-pt1: CMakeFiles/pt1.dir/CV4_Structures/structures.c.o
+pt1: CMakeFiles/pt1.dir/CV5/poiters.c.o
 pt1: CMakeFiles/pt1.dir/build.make
 pt1: CMakeFiles/pt1.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/e/Martin/git/pt1/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C executable pt1"
