@@ -1,0 +1,3 @@
+/mnt/e/Martin/git/pt1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/mnt/e/Martin/git/pt1/cmake-build-debug/CMakeFiles/edit_cache.dir
+/mnt/e/Martin/git/pt1/cmake-build-debug/CMakeFiles/pt1.dir
